@@ -1,0 +1,19 @@
+<h1>The search result(s):</h1><br>
+<form role="form" name="form">
+    <div class="result-container">
+
+    </div>
+</form>
+<script cam-script type="text/javascript">
+	
+    var list;
+    
+    fetch('http://localhost:8082/camunda/api/engine/engine/default/variable-instance?variableName=resultFiles')
+      .then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        console.log(data);
+    });
+
+
+</script>

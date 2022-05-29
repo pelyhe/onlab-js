@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "camunda-external-task-client-js": "^2.2.0",
+    "fs": "^0.0.1-security",
+    "ipfs-core": "^0.14.3",
+    "it-to-buffer": "^2.0.2"
+  }
+}

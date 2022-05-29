@@ -1,0 +1,33 @@
+<h1>The following file will be uploaded:</h1><br>
+<form role="form" name="form">
+    <div class="form-group">
+        <embed class="col-sm-12" style="height:80vh;width:80%" type="application/pdf" id="pdf-frame" />
+    </div>
+</form>
+<script cam-script type="text/javascript">
+
+    var variableId;
+
+    console.log(variableId);
+    console.log(variableId);
+    fetch('http://localhost:8082/camunda/api/engine/engine/default/variable-instance?variableName=uploadedFile')
+      .then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        variableId = data[0].id;
+        console.log(variableId);
+        return fetch("http://localhost:8082/camunda/api/engine/engine/default/variable-instance/" + variableId + "/data");
+    }).then(function (response) {
+        return response.blob();
+    }).then(function (myBlob) {
+        console.log("myblob: " + myBlob.stream)
+        console.log("myblob: " + myBlob.arrayBuffer)
+        console.log("myblob: " + myBlob.text)
+        var objectURL = URL.createObjectURL(myBlob);
+        document.querySelector('#pdf-frame').src = '';
+        document.querySelector('#pdf-frame').src = objectURL;
+        objectURL = URL.revokeObjectURL(myBlob);
+    });
+
+
+</script>

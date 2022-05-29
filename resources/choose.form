@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "text": "# What do you want to do?",
+      "type": "text",
+      "id": "Field_1iu8tvg"
+    },
+    {
+      "values": [
+        {
+          "label": "Upload",
+          "value": "1"
+        },
+        {
+          "label": "Search",
+          "value": "2"
+        }
+      ],
+      "label": "Choose wisely:",
+      "type": "radio",
+      "id": "Field_14x7h4q",
+      "key": "radio",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_0f8rtbi"
+}

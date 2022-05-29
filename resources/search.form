@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "text": "# Search file in IPFS by customer name",
+      "type": "text",
+      "id": "Field_01zkswv"
+    },
+    {
+      "label": "Name",
+      "type": "textfield",
+      "id": "Field_0c94txg",
+      "key": "name",
+      "description": "Type the name whom contract you want to search.",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_0kmkhsg"
+}
